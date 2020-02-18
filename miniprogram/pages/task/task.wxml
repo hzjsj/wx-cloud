@@ -1,0 +1,44 @@
+<view class="cu-form-group margin-top">
+	<view class="title">任务</view>
+	{{task.title}}
+</view>
+<view class="cu-form-group">
+	<view class="title">时间</view>
+	{{task.remind_time}}
+</view>
+<view class="cu-form-group">
+	<view class="title">状态</view>
+	{{task.status ? '已完成' : '进行中'}}
+</view>
+<view class="cu-bar bg-white margin-top">
+	<view class="action">
+		备注
+	</view>
+</view>
+<view class="cu-form-group">
+	{{task.desc}}
+</view>
+
+<view class="cu-bar bg-white margin-top">
+	<view class="action">
+		图片
+	</view>
+	<view class="action">
+		{{task.photos.length}}张
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="grid col-2 grid-square flex-sub">
+		<view class="bg-img" wx:for="{{task.photos}}" wx:key="index" bindtap="ViewImage" data-url="{{item.fileID}}">
+			<image src='{{item.fileID}}' mode='aspectFill'></image>
+		</view>
+	</view>
+</view>
+<view style="height:120rpx;"></view>
+
+<view class="K_bottom bg-white">
+<view class="flex">
+	<button class="cu-btn bg-blue lg k_left" bindtap="status">完成</button>
+  <button class="cu-btn bg-red lg" bindtap="delete">删除</button>
+</view>
+</view>

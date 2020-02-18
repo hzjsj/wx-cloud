@@ -1,0 +1,45 @@
+<form bindsubmit="formSubmit">
+	<view class="cu-form-group margin-top" bindtap="showModal" data-target="ColorModal">
+		<view class="title">选择颜色</view>
+		<view class="padding bg-{{color}} solid radius shadow-blur"></view>
+	</view>
+	<view class="cu-form-group">
+		<textarea name="diary" maxlength="-1" placeholder="请输入内容"></textarea>
+	</view>
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" bindtap="ViewImage" wx:if="{{photo}}">
+				<image src='{{photo}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{!photo}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+	<view class="padding">
+  <button class="cu-btn block bg-blue lg" form-type="submit">提交</button>
+</view>
+</form>
+<view class="cu-modal {{modalName=='ColorModal'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar justify-end solid-bottom">
+			<view class="content">选择颜色</view>
+			<view class="action" bindtap="hideModal">
+				<text class="cuIcon-close text-red"></text>
+			</view>
+		</view>
+		<view class="grid col-5 padding">
+			<view class="padding-xs" wx:for="{{ColorList}}" wx:key="index" bindtap="SetColor" data-color="{{item.name}}" wx:if="{{item.name!='white'}}">
+				<view class="padding-tb bg-{{item.name}} radius"> {{item.title}} </view>
+			</view>
+		</view>
+	</view>
+</view>

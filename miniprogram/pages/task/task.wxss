@@ -1,0 +1,14 @@
+.K_bottom{
+  position: fixed;
+  bottom: 0rpx;
+  height: 120rpx;
+  /* width: 100%; */
+}
+.K_bottom .flex button{
+  margin-right:20rpx;
+  margin-top: 20rpx;
+  width: 345rpx;
+}
+.K_bottom .flex .k_left{
+  margin-left: 20rpx;
+}

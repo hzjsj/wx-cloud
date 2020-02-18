@@ -1,0 +1,77 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"enhance": true
+	},
+	"appid": "wx2e2ae559f314e176",
+	"projectname": "kebiao",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "pages/task/task",
+					"pathName": "pages/task/task",
+					"query": "id=74b140b45e475ed00fef08bd39e32cea",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tasks/tasks",
+					"pathName": "pages/tasks/tasks",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/addtask/addtask",
+					"pathName": "pages/addtask/addtask",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

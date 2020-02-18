@@ -1,0 +1,17 @@
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-titles text-blue"></text>今日日程
+    </view>
+  </view>
+  <view class="cu-list menu">
+  	<view class="cu-item" wx:for="{{tasks}}" wx:key="index" bindtap="task" data-id="{{item._id}}">
+  		<view class="content">
+  			<text class="text-grey">{{item.title}}</text>
+  		</view>
+  		<view class="action">
+  			<text class="text-grey text-sm">{{item.remind_time}}</text>
+  		</view>
+  	</view>
+  </view>
+	  <image class="k_addtask" bindtap="addtask" src='cloud://svip9.7376-svip9-1258873690/images/addtask.png'></image>

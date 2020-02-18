@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tasks/tasks",
+    "pages/task/task",
+    "pages/addtask/addtask",
+    "pages/diary/diary",
+    "pages/adddiary/adddiary",
+    "pages/my/my"
+  ],
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#0081ff",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/tabbar/course.png",
+        "selectedIconPath": "images/tabbar/course_select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tabbar/my.png",
+        "selectedIconPath": "images/tabbar/my_select.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云日程",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap60.json"
+}

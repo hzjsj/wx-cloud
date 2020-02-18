@@ -1,0 +1,22 @@
+  <view class="cu-bar bg-white search fixed">
+  	<view class="search-form round">
+  		<text class="cuIcon-search"></text>
+  		<input type="text" bindblur="search" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  	</view>
+  	<view class="action">
+  		<button class="cu-btn bg-gradual-blue round">搜索</button>
+  	</view>
+  </view>
+
+  <view class="cu-list menu">
+  	<view class="cu-item" wx:for="{{tasks}}" wx:key="index" bindtap="task" data-id="{{item._id}}">
+  		<view class="content">
+  			<!-- <text class="cuIcon-warn text-green"></text> -->
+  			<text class="text-grey">{{item.title}}</text>
+  		</view>
+  		<view class="action">
+  			<text class="text-grey text-sm">{{item.task_time}}</text>
+  		</view>
+  	</view>
+  </view>
+  <image class="k_addtask" bindtap="addtask" src='cloud://svip9.7376-svip9-1258873690/images/addtask.png'></image>

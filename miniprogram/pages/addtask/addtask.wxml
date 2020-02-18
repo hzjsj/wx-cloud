@@ -1,0 +1,53 @@
+<form bindsubmit="formSubmit">
+	<view class="cu-form-group margin-top">
+		<view class="title">任务</view>
+		<input name="title" maxlength="16" placeholder="任务名称"></input>
+	</view>
+	<view class="cu-form-group margin-top">
+		<view class="title">时间</view>
+		<picker mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">日期</view>
+		<picker mode="date" value="{{date}}" start="2020-01-01" end="2099-12-31" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">提醒</view>
+		<switch  checked="{{remind}}" class="blue sm" bindtap="remind"></switch>
+	</view>
+	<view class="cu-form-group margin-top">
+		<textarea name="desc" maxlength="-1" placeholder="备注"></textarea>
+	</view>
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/9
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+	<view class="padding">
+		<button class="cu-btn block bg-blue lg" form-type="submit">提交</button>
+	</view>
+</form>
