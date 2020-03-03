@@ -3,6 +3,8 @@
 
 这个项目开源，可以用来学习小程序云开发
 
+效果图地址： https://www.yuque.com/hzpc/project 
+
 
 
 # 部署流程
